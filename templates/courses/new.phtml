@@ -1,0 +1,24 @@
+<form action="/courses" method="post">
+    <div>
+        <label>
+            Название
+            <input type="text" name="courses[title]" value="<?= isset($course['title']) ? htmlspecialchars($course['title']) : '' ?>">
+        </label>
+        <?php if (isset($errors['title'])): ?>
+            <div><?= $errors['title'] ?></div>
+        <?php endif ?>
+    </div>
+    <div>
+        <label>
+            Платный
+            <select size="1" name="courses[paid]">
+                    <option <?= (isset($course['paid']) && $course['paid'] == 1) ? 'selected' : '' ?> value=1>Да</option>
+                    <option <?= (isset($course['paid']) && $course['paid'] == 0) ? 'selected' : '' ?> value=0>Нет</option>
+            </select>
+        </label>
+        <?php if (isset($errors['paid'])): ?>
+            <div><?= $errors['paid'] ?></div>
+        <?php endif ?>
+    </div>
+    <input type="submit" value="Create course">
+</form>

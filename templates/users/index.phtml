@@ -1,0 +1,18 @@
+<h3>Поиск пользователей</h3>
+<form action="/users" method="get">
+    <input type="search" name="term" value="<?= htmlspecialchars($term) ?>" />
+    <input type="submit" value="Search" />
+</form>
+<br>
+<h3>Пользователи</h3>
+<p>
+    <?php foreach ($users as $user): ?>
+        <a href="/users<?= "/{$user['id']}" ?>"><?= "{$user['firstName']} {$user['lastName']}"?></a><br>
+    <?php endforeach; ?>
+    <p>
+        <a href="?page=<?= $page < 2 ? 1 : $page - 1 ?>">Prev</a> <a href="?page=<?= $page + 1 ?>">Next</a>
+    </p>
+</p>
+
+
+
