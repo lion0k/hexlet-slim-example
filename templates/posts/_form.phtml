@@ -1,0 +1,18 @@
+    <div>
+        <label>
+            Заголовок
+            <input type="text" name="post[name]" value="<?= isset($post['name']) ? htmlspecialchars($post['name']) : '' ?>">
+        </label>
+        <?php if (isset($errors['name'])): ?>
+            <div><?= $errors['name'] ?></div>
+        <?php endif ?>
+    </div>
+    <div>
+        <label>
+            Описание
+            <textarea name="post[body]"><?= isset($post['body']) ? htmlspecialchars($post['body']) : '' ?></textarea>
+        </label>
+        <?php if (isset($errors['body'])): ?>
+            <div><?= $errors['body'] ?></div>
+        <?php endif ?>
+    </div>

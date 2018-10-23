@@ -1,0 +1,12 @@
+<style>
+    table {text-align: left;}
+</style>
+<a href="/posts">Посты</a>
+<p>
+<table>
+    <caption>Пост</caption>
+    <tr><td>ID</td><td><?= isset($post['id']) ? htmlspecialchars($post['id']) : '' ?></td></tr>
+    <tr><td>Заголовок</td><td><?= isset($post['name']) ? htmlspecialchars($post['name']) : '' ?></td></tr>
+    <tr><td>Описание</td><td><?= isset($post['body']) ? htmlspecialchars($post['body']) : '' ?></td></tr>
+</table>
+</p>

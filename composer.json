@@ -1,0 +1,16 @@
+{
+    "autoload": {
+        "psr-4": {
+            "HexletSlimExample\\": "src/"
+        }
+    },
+
+    "require": {
+        "slim/slim": "^3.0",
+        "tightenco/collect": "^5.7",
+        "guzzlehttp/guzzle": "*",
+        "slim/php-view": "^2.2",
+        "slim/flash": "*",
+        "danielstjules/stringy": "~3.1.0"
+    }
+}
